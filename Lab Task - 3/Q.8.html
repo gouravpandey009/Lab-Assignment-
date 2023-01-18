@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Version</title>
+    <style>
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu>li {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .menu>li:hover .sub-menu {
+            display: block;
+        }
+
+        .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About Us</a>
+            <ul class="sub-menu">
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Our Mission</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Products</a>
+            <ul class="sub-menu">
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+
+
+</body>
+
+</html>
