@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Webpage</title>
+    <style>
+        /* Define the styles for different colors */
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1 id="heading">My Website</h1>
+    </header>
+
+    <main>
+        <p>Some content goes here...</p>
+    </main>
+
+    <footer>
+        <p>Copyright &copy;2022 Gourav Pandey</p>
+    </footer>
+    <button id="button1">Change to Red</button>
+    <button id="button2">Change to Blue</button>
+    <button id="button3">Change to Green</button>
+
+    <script>
+    // Get the heading element by its id
+    var heading = document.getElementById("heading");
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+    
+      // Add an event listener to the button1 to listen for clicks
+      button1.addEventListener("click", function() {
+        //Change the color of h1 to red
+        heading.style.color = "red";
+      });
+       // Add an event listener to the button2 to listen for clicks
+      button2.addEventListener("click", function() {
+        //Change the color of h1 to blue
+        heading.classList.add("blue");
+      });
+       // Add an event listener to the button3 to listen for clicks
+      button3.addEventListener("click", function() {
+        //Change the color of h1 to green
+        heading.classList.remove("blue");
+        heading.classList.add("green");
+      });
+    </script>
+  </body>
+</html>

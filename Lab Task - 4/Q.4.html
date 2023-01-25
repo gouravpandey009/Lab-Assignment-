@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Webpage</title>
+    <style>
+        /* Define the styles for the different contents */
+        #main-content {
+            font-size: 18pt;
+        }
+
+        #main-content p {
+            color: black;
+        }
+
+        #alternate-content {
+            font-size: 24pt;
+        }
+
+        #alternate-content p {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <main id="main-section">
+        <div id="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content of the webpage.</p>
+            <p>It can contain different types of information, such as text, images, and videos.</p>
+        </div>
+    </main>
+
+    <aside>
+        <p>Some additional information can be displayed in an aside section.</p>
+    </aside>
+
+    <footer>
+        <p>Copyright &copy;2022 Gourav Pandey</p>
+    </footer>
+
+    <button id="button">Change Content</button>
+
+    <script>
+        // Get the button and main section elements by their id
+        var button = document.getElementById("button");
+        var mainSection = document.getElementById("main-section");
+
+        // Add an event listener to the button to listen for clicks
+        button.addEventListener("click", function () {
+            // Change the innerHTML of the main section
+            mainSection.innerHTML = "<div id='alternate-content'><h2>Alternate Content</h2><p>This is the alternate content of the webpage.</p><p>It has a different style than the main content.</p></div>";
+        });
+    </script>
+</body>
+
+</html>

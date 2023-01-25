@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Webpage</title>
+    <style>
+        /* Define the background color classes */
+        .lightgreen {
+            background-color: lightgreen;
+        }
+        .red {
+            color: red;
+        }
+        .big {
+            font-size: 48pt;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading" class="red big">Welcome to my webpage</h1>
+    <button id="button">Change Color</button>
+
+    <script>
+      // Get the button element by its id
+      var button = document.getElementById("button");
+
+      // Add an event listener to the button to listen for clicks
+      button.addEventListener("click", function() {
+        alert("The background color is about to change!");
+        // Add the lightgreen class to the document body
+        document.body.classList.add("lightgreen");
+        alert("The background color has been changed!");
+      });
+    </script>
+  </body>
+</html>

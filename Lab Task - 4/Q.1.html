@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Webpage</title>
+  </head>
+  <body>
+    <h1 id="heading">Welcome to my webpage</h1>
+    <button id="button">Change Color</button>
+
+    <script>
+      // Get the button and heading elements by their id
+      var button = document.getElementById("button");
+      var heading = document.getElementById("heading");
+
+      // Add an event listener to the button to listen for clicks
+      button.addEventListener("click", function() {
+        // Change the background color of the body
+        document.body.style.backgroundColor = "purple";
+
+        // Change the text color of the heading
+        heading.style.color = "white";
+      });
+    </script>
+  </body>
+</html>
