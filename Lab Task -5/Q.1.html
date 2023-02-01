@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <style>
+      #hello {
+        display: inline-block;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="hello">Hello</h2>
+    <input type="text" id="input">
+    <button id="button">Replace</button>
+    <script>
+      const input = document.querySelector("#input");
+      const button = document.querySelector("#button");
+      const hello = document.querySelector("#hello");
+      button.addEventListener("click", function() {
+        hello.innerHTML = input.value;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <button id="button">Add Row</button>
+    <table id="table">
+      <tr>
+        <td>1</td>
+      </tr>
+    </table>
+    <script>
+      const button = document.querySelector("#button");
+      const table = document.querySelector("#table");
+      button.addEventListener("click", function() {
+        const row = table.insertRow();
+        const cell = row.insertCell();
+        if (table.rows.length > 2) {
+          const previousRow = table.rows[table.rows.length - 2];
+          const secondPreviousRow = table.rows[table.rows.length - 3];
+          const previousValue = Number(previousRow.cells[0].innerText);
+          const secondPreviousValue = Number(secondPreviousRow.cells[0].innerText);
+          cell.innerText = previousValue + secondPreviousValue;
+        } else {
+          cell.innerText = 1;
+        }
+      });
+    </script>
+  </body>
+</html>

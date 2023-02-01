@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <input type="text" id="in1">
+    <input type="text" id="in2">
+    <br><br>
+    <button id="add">+</button>
+    <button id="subtract">-</button>
+    <button id="multiply">*</button>
+    <button id="divide">/</button>
+    <br><br>
+    <p id="result"></p>
+    <script>
+      const in1 = document.querySelector("#in1");
+      const in2 = document.querySelector("#in2");
+      const addButton = document.querySelector("#add");
+      const subtractButton = document.querySelector("#subtract");
+      const multiplyButton = document.querySelector("#multiply");
+      const divideButton = document.querySelector("#divide");
+      const result = document.querySelector("#result");
+      addButton.addEventListener("click", function() {
+        const value1 = Number.parseInt(in1.value);
+        const value2 = Number.parseInt(in2.value);
+        result.innerHTML = value1 + value2;
+      });
+      subtractButton.addEventListener("click", function() {
+        const value1 = Number.parseInt(in1.value);
+        const value2 = Number.parseInt(in2.value);
+        result.innerHTML = value1 - value2;
+      });
+      multiplyButton.addEventListener("click", function() {
+        const value1 = Number.parseInt(in1.value);
+        const value2 = Number.parseInt(in2.value);
+        result.innerHTML = value1 * value2;
+      });
+      divideButton.addEventListener("click", function() {
+        const value1 = Number.parseInt(in1.value);
+        const value2 = Number.parseInt(in2.value);
+        result.innerHTML = value1 / value2;
+      });
+    </script>
+  </body>
+</html>
