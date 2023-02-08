@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add styles here */
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+    }
+    input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 60%;
+      margin: 20px auto;
+    }
+    li {
+      background-color: lightgray;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping List</h1>
+  <form>
+    <input type="text" id="item">
+    <button type="submit">Add</button>
+  </form>
+  <ul id="list"></ul>
+  <script>
+    // Get the form and the list
+    const form = document.querySelector("form");
+    const list = document.querySelector("#list");
+
+    // Add event listener to the form
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const item = document.querySelector("#item").value;
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

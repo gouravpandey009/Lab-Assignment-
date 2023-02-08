@@ -1,0 +1,4 @@
+table tr.checked {
+    text-decoration: line-through;
+    background-color: #ebebeb;
+  }
